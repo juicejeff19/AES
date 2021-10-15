@@ -94,7 +94,6 @@ function descifrar192(){
         alert("La clave no es valida, tiene que ser de 24 caracteres");
     }else{
         var descifrado = CryptoJS.AES.decrypt(txt, clave);
-        document.getElementById("txtdescifrado").innerHTML=descifrado.toString(CryptoJS.enc.Utf8);
         descargarArchivo(generarTexto(descifrado.toString(CryptoJS.enc.Utf8)), 'DescifradoAES-192');
     }
 
