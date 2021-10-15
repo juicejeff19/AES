@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESCIFRADO AES</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+<script rel="script" src="JS/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/tripledes.js"></script>
+
+<div class="container">
+    <div class="row" style="margin-top: 3%">
+        <h4 style="text-align: center">Seleccione el tipo de descifrado</h4><br>
+        <select name="tipoAES" id="tipo">
+            <option value="128">128</option>
+
+            <option value="192">192</option>
+
+            <option value="256">256</option>
+        </select>
+        <br>
+        <br>
+        <div class="input-group-prepend" style="margin-top: 5%">
+            <center><h1>Descifrado AES</h1></center>
+
+            <input class="form-control" type="file" id="archivodes" oninput="leerdes()">
+            <br>
+            <input class="form-control" type="password" placeholder="Clave de numero de caracteres correspondiente al cifrado" id="clavedes"
+                   minlength="12">
+            <br>
+            <input class="form-control" type="button" value="Descifrar" onclick="descifrar()">
+            <br>
+            <br>
+            <form action="index.html">
+                <input class="form-control" type="submit" value="Cifrar" />
+            </form>
+            <p id="txtDes"></p>
+            <center><p>Alcalá Rangel Jeffrey Alexander 5IV8</p></center>
+
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
